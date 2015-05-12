@@ -12,13 +12,24 @@ namespace kursach_l
 {
     public partial class Form_research : Form
     {
-        public bool Save_as()
-        {
-            return true;
-        }
         public Form_research()
         {
             InitializeComponent();
+        }
+
+        private void Res_Click(object sender, EventArgs e)
+        {
+            Solve_DoWork(null,null);
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Solve_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Save.Enabled = true;
         }
     }
 }

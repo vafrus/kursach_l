@@ -17,13 +17,29 @@ namespace kursach_l
         {
             InitializeComponent();
         }
-
-        private void M_save_as_Click(object sender, EventArgs e)
+        public void sort_shell(int[] A)
         {
-            if (rf != null)
-                if (rf.Save_as()) ;
-                else ;
-            else ;
+            
+        }
+
+        public void sort_insert(int[] A)
+        {
+            int i, j, k, b;
+            int n = A.Length;
+            for (i = 1; i < n; i++)
+            {
+                b = A[i];
+                j = 0;
+                while (b > A[j] && j <= i)
+                {
+                    j = j + 1;
+                }
+                for (k = i; k <= j + 1; k--)
+                {
+                    A[k] = A[k - 1];
+                }
+                A[j] = b;
+            }
         }
 
         private void M_exit_Click(object sender, EventArgs e)
