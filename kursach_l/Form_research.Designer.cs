@@ -31,11 +31,12 @@
             this.Res = new System.Windows.Forms.Button();
             this.Out1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.Out2 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Out2 = new System.Windows.Forms.ToolStripProgressBar();
+            this.Out3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Save = new System.Windows.Forms.Button();
-            this.Solve = new System.ComponentModel.BackgroundWorker();
+            this.SaveF = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.Out1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -63,23 +64,34 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.Out2});
+            this.Out2,
+            this.Out3});
             this.statusStrip1.Location = new System.Drawing.Point(0, 362);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(588, 22);
+            this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // Out2
-            // 
-            this.Out2.Name = "Out2";
-            this.Out2.Size = new System.Drawing.Size(300, 16);
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(167, 17);
-            this.toolStripStatusLabel1.Text = "Прогресс подсчета времени:";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(116, 17);
+            this.toolStripStatusLabel1.Text = "Прогресс подсчета:";
+            // 
+            // Out2
+            // 
+            this.Out2.Maximum = 5000;
+            this.Out2.Minimum = 500;
+            this.Out2.Name = "Out2";
+            this.Out2.Size = new System.Drawing.Size(300, 16);
+            this.Out2.Value = 500;
+            // 
+            // Out3
+            // 
+            this.Out3.Name = "Out3";
+            this.Out3.Size = new System.Drawing.Size(22, 17);
+            this.Out3.Text = "n=";
             // 
             // groupBox1
             // 
@@ -102,9 +114,11 @@
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // Solve
+            // SaveF
             // 
-            this.Solve.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Solve_DoWork);
+            this.SaveF.DefaultExt = "txt";
+            this.SaveF.FileName = "Research_results";
+            this.SaveF.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // Form_research
             // 
@@ -137,6 +151,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Save;
-        private System.ComponentModel.BackgroundWorker Solve;
+        private System.Windows.Forms.ToolStripStatusLabel Out3;
+        private System.Windows.Forms.SaveFileDialog SaveF;
     }
 }

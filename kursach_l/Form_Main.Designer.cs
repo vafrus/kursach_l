@@ -72,7 +72,7 @@
             // M_exit
             // 
             this.M_exit.Name = "M_exit";
-            this.M_exit.Size = new System.Drawing.Size(152, 22);
+            this.M_exit.Size = new System.Drawing.Size(108, 22);
             this.M_exit.Text = "Выход";
             this.M_exit.Click += new System.EventHandler(this.M_exit_Click);
             // 
@@ -182,6 +182,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 271);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(632, 22);
+            this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -194,7 +195,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_main";
-            this.Text = "Form_Main";
+            this.Text = "Основное окно";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_main_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

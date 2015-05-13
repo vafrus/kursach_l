@@ -112,6 +112,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sort.cs" />
+    <EmbeddedResource Include="Form_1st_method.resx">
+      <DependentUpon>Form_1st_method.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2nd_method.resx">
+      <DependentUpon>Form_2nd_method.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_about.resx">
+      <DependentUpon>Form_about.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_main.resx">
       <DependentUpon>Form_main.cs</DependentUpon>
     </EmbeddedResource>

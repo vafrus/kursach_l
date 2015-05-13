@@ -12,34 +12,14 @@ namespace kursach_l
 {
     public partial class Form_main : Form
     {
-        private Form_research rf;
         public Form_main()
         {
             InitializeComponent();
         }
-        public void sort_shell(int[] A)
-        {
-            
-        }
 
-        public void sort_insert(int[] A)
+        private void Form_main_FormClosed(object sender, FormClosedEventArgs e)
         {
-            int i, j, k, b;
-            int n = A.Length;
-            for (i = 1; i < n; i++)
-            {
-                b = A[i];
-                j = 0;
-                while (b > A[j] && j <= i)
-                {
-                    j = j + 1;
-                }
-                for (k = i; k <= j + 1; k--)
-                {
-                    A[k] = A[k - 1];
-                }
-                A[j] = b;
-            }
+            Application.Exit();
         }
 
         private void M_exit_Click(object sender, EventArgs e)
@@ -61,8 +41,8 @@ namespace kursach_l
 
         private void M_res_Click(object sender, EventArgs e)
         {
-            rf = new Form_research();
-            rf.Show();
+            Form_research f = new Form_research();
+            f.Show();
         }
 
         private void M_m1_desc_Click(object sender, EventArgs e)
@@ -100,11 +80,5 @@ namespace kursach_l
             Form_about f = new Form_about();
             f.Show();
         }
-
-        private void Form_main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
     }
 }
