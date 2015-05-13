@@ -19,7 +19,7 @@ namespace kursach_l
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form_main f = new Form_main();
+            Form_main f = new Form_main(this);
             f.Show();
             this.Visible = false;
         }

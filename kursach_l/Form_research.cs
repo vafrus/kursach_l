@@ -118,7 +118,7 @@ namespace kursach_l
             int i;
             S[0] = "n\tt1\tt2";
             for (i = 0; i <= 90; i++)
-                S[i + 1] = (i*50).ToString() + "\t" + Convert.ToString(R[0, i]) + "\t" + Convert.ToString(R[1, i]);
+                S[i + 1] = (i*50+500).ToString() + "\t" + Convert.ToString(R[0, i]) + "\t" + Convert.ToString(R[1, i]);
             System.IO.File.WriteAllLines(Path, S);
         }
     }

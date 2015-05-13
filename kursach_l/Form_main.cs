@@ -12,9 +12,11 @@ namespace kursach_l
 {
     public partial class Form_main : Form
     {
-        public Form_main()
+        private Form_Title f;
+        public Form_main(Form_Title f)
         {
             InitializeComponent();
+            this.f = f;
         }
 
         private void Form_main_FormClosed(object sender, FormClosedEventArgs e)
@@ -79,6 +81,12 @@ namespace kursach_l
         {
             Form_about f = new Form_about();
             f.Show();
+        }
+
+        private void титульныйЛистToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            f.Visible = true;
+            this.Dispose();
         }
     }
 }

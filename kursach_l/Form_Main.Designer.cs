@@ -45,6 +45,7 @@
             this.M_ref = new System.Windows.Forms.ToolStripMenuItem();
             this.M_about = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.титульныйЛистToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.титульныйЛистToolStripMenuItem,
             this.M_exit});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -186,6 +188,13 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // титульныйЛистToolStripMenuItem
+            // 
+            this.титульныйЛистToolStripMenuItem.Name = "титульныйЛистToolStripMenuItem";
+            this.титульныйЛистToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.титульныйЛистToolStripMenuItem.Text = "Титульный лист";
+            this.титульныйЛистToolStripMenuItem.Click += new System.EventHandler(this.титульныйЛистToolStripMenuItem_Click);
+            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,5 +232,6 @@
         private System.Windows.Forms.ToolStripMenuItem M_m1;
         private System.Windows.Forms.ToolStripMenuItem M_m2;
         private System.Windows.Forms.ToolStripMenuItem M_res;
+        private System.Windows.Forms.ToolStripMenuItem титульныйЛистToolStripMenuItem;
     }
 }
